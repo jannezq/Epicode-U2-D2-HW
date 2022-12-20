@@ -388,7 +388,7 @@
         }
 
 
-        //console.log(changeHeaderColorNode());
+        //changeHeaderColorNode();
 
         // Write a JavaScript functionality to change the background of the jumbotron
         function changeJumboBG(color) {
@@ -397,7 +397,7 @@
         }
 
 
-        //console.log(changeBackgroundJumbo());
+        //changeBackgroundJumbo();
 
         // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element.
         // It should happen when the page loads, automatically
@@ -427,21 +427,38 @@
         }
 
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
-        function newBlogPost() {
-            let title = document.createElement('h2');
-            title.classList.add('blog-post-title');
-            title.innerHTML = "New post";
-            let newBlogPost = document.getElementsByClassName('blog-post')
-            newBlogPost.appendChild(title);
+        function newBlogPost(title, text) {
+            //create a new div
+            let newBlog = document.createElement('div')
+            //create a new title
+            let newTitle = document.createElement('h2')
+            newTitle.innerText = title;
+            //create p tag for blog post
+            let newPost = document.createElement('p')
+            newPost.innerText = text;
 
-            console.log('New Post');
+            //add class list to new title and blog post
+            newBlog.className = "blog-post"
+            newTitle.className = "blog-post-title"
+            newPost.className = "blog-post-meta"
+
+            //append to the new div
+            newBlog.appendChild(newTitle);
+            newBlog.appendChild(newPost);
+
+            let parentDiv = document.querySelector('.blog-main');
+            let beforeElement = document.querySelector('.blog-pagination');
+            parentDiv.insertBefore(newBlog, beforeElement);
+
         }
 
+        newBlogPost('Testing new Title here', "hello I am Jovellyn Testing out the new adding blog post function!")
 
 
         // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
 
         // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
+
         // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
     </script>
 </body>
