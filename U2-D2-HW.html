@@ -385,18 +385,33 @@
         let changeHeaderColorNode = document.querySelector('.display-4');
         changeHeaderColorNode.style.color = "blue"
 
-        console.log(changeHeaderColorNode);
+        //console.log(changeHeaderColorNode);
 
         // Write a JavaScript functionality to change the background of the jumbotron
         let changeBackgroundJumbo = document.querySelector('.jumbotron');
         changeBackgroundJumbo.style.backgroundColor = "yellow"
 
-        console.log(changeBackgroundJumbo);
+        //console.log(changeBackgroundJumbo);
 
-        // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
-        
+        // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element.
+        // It should happen when the page loads, automatically
+
+        function removeLink() {
+            let link = document.querySelector("aside > div:nth-child(3) ol li:nth-child(2)");
+            console.log(link);
+            link.remove();
+        };
+
+        window.onload = function () {
+            removeLink()
+        };
 
         // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+
+        function removeCharacters() {
+
+        }
+
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
         // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
 
