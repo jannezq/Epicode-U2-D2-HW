@@ -424,7 +424,18 @@
             // let stringNode = document.querySelector(".blog-main div p:nth-child(3)")
             // let removeChar = stringNode.innerHTML.substring(50);
             // console.log(removeChar);
+
+            let blogPostsNode = document.querySelectorAll('.blog-main div p:nth-child(3)');
+            console.log(blogPostsNode);
+            for (let i = 0; i < blogPostsNode.length; i++) {
+                let blogPost = blogPostsNode[i]
+                blogPost.innerText = blogPost.innerText.substring(50);
+                console.log(blogPost);
+            }
+
         }
+
+        removeCharacters()
 
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
         function newBlogPost(title, text) {
