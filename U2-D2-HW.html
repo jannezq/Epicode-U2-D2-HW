@@ -372,33 +372,38 @@
         function createNewLink(link) {
 
             let newLink = document.createElement("span");
-            newLink.innerHTML = link;
+            newLink.innerText = link;
             let navMenu = document.querySelector("nav");
 
             navMenu.appendChild(newLink);
         }
 
-        createNewLink("NEW LINK");
+        createNewLink();
 
         // Write a JavaScript functionality to change the color of the main heading title
 
-        let changeHeaderColorNode = document.querySelector('.display-4');
-        changeHeaderColorNode.style.color = "blue"
+        function changeHeading1(color) {
+            let changeHeaderColorNode = document.querySelector('.display-4');
+            changeHeaderColorNode.style.color = color;
+        }
 
-        //console.log(changeHeaderColorNode);
+
+        //console.log(changeHeaderColorNode());
 
         // Write a JavaScript functionality to change the background of the jumbotron
-        let changeBackgroundJumbo = document.querySelector('.jumbotron');
-        changeBackgroundJumbo.style.backgroundColor = "yellow"
+        function changeJumboBG(color) {
+            let changeBackgroundJumbo = document.querySelector('.jumbotron');
+            changeBackgroundJumbo.style.backgroundColor = color;
+        }
 
-        //console.log(changeBackgroundJumbo);
+
+        //console.log(changeBackgroundJumbo());
 
         // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element.
         // It should happen when the page loads, automatically
 
         function removeLink() {
             let link = document.querySelector("aside > div:nth-child(3) ol li:nth-child(2)");
-            console.log(link);
             link.remove();
         };
 
@@ -409,10 +414,31 @@
         // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
 
         function removeCharacters() {
+            // let blogPosts = document.querySelector(".blog-main");
+            // let showPost = [];
+            // for (let i = 0; i < blogPosts.length; i++) {
+            //     blogPosts[i].push(showPost)
+            // }
 
+            // console.log(showPost);
+            // let stringNode = document.querySelector(".blog-main div p:nth-child(3)")
+            // let removeChar = stringNode.innerHTML.substring(50);
+            // console.log(removeChar);
         }
 
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
+        function newBlogPost() {
+            let title = document.createElement('h2');
+            title.classList.add('blog-post-title');
+            title.innerHTML = "New post";
+            let newBlogPost = document.getElementsByClassName('blog-post')
+            newBlogPost.appendChild(title);
+
+            console.log('New Post');
+        }
+
+
+
         // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
 
         // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name

@@ -45,12 +45,12 @@ aside > div:nth-child(2) ol a {
 /* Q8 */
 
 .blog-post:nth-of-type(2) p:first-of-type > a {
-  border: 2px solid palevioletred;
+  border: 2px solid rgb(0, 0, 0);
 }
 
 /*  Q9 */
 
-.container .row .blog-main > div:last-of-type ul {
+.container .row .blog-main > div:last-of-type ul li:nth-child(2) {
   border: 5px solid orangered;
   color: aliceblue;
   background-color: brown;
